@@ -34,6 +34,8 @@ class Player extends React.Component {
         <h3>Player {this.props.plyarenumber}</h3>
         <button onClick={this.handleClick.bind(this)}>Start</button> 
          <a href="#"><GnreatCard number = {this.state.random} /></a> 
+
+         
       </div>
     );
   }
