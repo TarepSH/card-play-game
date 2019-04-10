@@ -29,10 +29,15 @@ code {
   transform-origin: bottom;  
 }
 
+
 .player4 {
   transform: rotate(-90deg) translateY(+100%);
   top: 47%;
-right: 10%;
+right: 25%;
   position: absolute;
 
+}
+
+img:hover {
+  transform: scale(1.3);
 }

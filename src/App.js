@@ -15,32 +15,14 @@ class GnreatCard extends React.Component{
 class Player extends React.Component {
   constructor(props) {
     super(props);
-    this.handleClick = this.handleClick.bind(this);
-    this.state = { random: 0 };
+    this.state = { random: Math.floor(Math.random() * Math.floor(11)) };
   }
 
-
-  handleClick() {
-    const min = Math.ceil(1);
-    const max = Math.floor(3);
-    const rand = Math.floor(Math.random() * (max - min)) + min ;
-    this.setState({ random: this.state.random + rand });
-  }
-
-  
   render(){
     return(
       <div className={"player" + this.props.plyarenumber}>
         <h3>Player {this.props.plyarenumber}</h3>
-        <button onClick={this.handleClick.bind(this)}>Start</button> 
          <a href="#"><GnreatCard number = {this.state.random} /></a> 
-         <a href="#"><GnreatCard number = {this.state.random} /></a> 
-
-         <a href="#"><GnreatCard number = {this.state.random} /></a> 
-
-
-
-
       </div>
     );
   }
