@@ -110,8 +110,7 @@ export class CheckWiner extends React.Component {
     
     CheckplayRound(score){
       this.setState({
-        playRound: this.state.playRound.concat(score)
-        
+        playRound: this.state.playRound.concat(score),
       })
 
       if (this.state.playRound.length === 3) {
@@ -150,32 +149,30 @@ export class CheckWiner extends React.Component {
           </h1>
           <p>player 1</p>
            {this.state.playerOne.map((card,index) =>
-            <a href={"#" + card} onClick={() => this.CheckplayRound(card)}> 
+            <a href={"#" + card} onClick={() => this.CheckplayRound(card, index), () => this.setState({playerOne: this.state.playerOne.splice(index)})}> 
             <img src={require("./cards/" + card + ".png")}/>
             </a>
            )}   
           </div>  
           <div className="player2">
           <p>player 2</p>
-          {this.state.playerOne.map((card,index) =>
-            <a href={"#" + card} onClick={() => this.CheckplayRound(card)}> 
-            <img src={require("./cards/" + card + ".png")}/>
-            </a>
-           )}   
+          {this.state.playerTow.map((card,index) =>
+            <a href={"#" + card} onClick={() => this.CheckplayRound(card, index), () => this.setState({playerTow: this.state.playerTow.splice(index)})}> 
+              <img src={require("./cards/" + card + ".png")}/>
+            </a>)} 
           </div>   
           <div className="player3">
           <p>player 3</p>
-          {this.state.playerOne.map((card,index) =>
-            <a href={"#" + card} onClick={() => this.CheckplayRound(card)}> 
-            <img src={require("./cards/" + card + ".png")}/>
-            </a>
-           )}   
+          {this.state.playerThree.map((card,index) =>
+            <a href={"#" + card} onClick={() => this.CheckplayRound(card, index), () => this.setState({playerThree: this.state.playerThree.splice(index)})}> 
+              <img src={require("./cards/" + card + ".png")}/>
+            </a>)}   
           </div>   
           <div className="player4">
           <p>player 4</p>
-          {this.state.playerOne.map((card,index) =>
-            <a href={"#" + card} onClick={() => this.CheckplayRound(card)}> 
-            <img src={require("./cards/" + card + ".png")}/>
+          {this.state.playerForu.map((card,index) =>
+            <a href={"#" + card} onClick={() => this.CheckplayRound(card, index), () => this.setState({playerForu: this.state.playerForu.splice(index)})}> 
+              <img src={require("./cards/" + card + ".png")}/>
             </a>
            )}   
           </div>        
