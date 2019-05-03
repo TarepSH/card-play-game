@@ -95,10 +95,10 @@ export class CheckWiner extends React.Component {
       super(props);
       this.state = { 
         
-        playerOne: Array(5).fill().map(() => Math.floor(Math.random() * Math.floor(11))),
-        playerTow: Array(5).fill().map(() => Math.floor(Math.random() * Math.floor(11))),
-        playerThree: Array(5).fill().map(() => Math.floor(Math.random() * Math.floor(11))),
-        playerForu: Array(5).fill().map(() => Math.floor(Math.random() * Math.floor(11))),
+        playerOne: Array(5).fill().map(() => Math.floor(Math.random() * Math.floor(8))),
+        playerTow: Array(5).fill().map(() => Math.floor(Math.random() * Math.floor(8))),
+        playerThree: Array(5).fill().map(() => Math.floor(Math.random() * Math.floor(8))),
+        playerForu: Array(5).fill().map(() => Math.floor(Math.random() * Math.floor(8))),
 
         playRound: [],
         winerplayer: 0,
